@@ -55,8 +55,8 @@
   ],
   "sections": [
     {
-      "title": "",
-      "subtitle": "",
+      "title": "Food & Beverage",
+      "subtitle": "Explore our carefully curated menus and enjoy exceptional dining moments along the shores of Seminyak Beach.",
       "carousel": false,
       "visible": true,
       "links": [
@@ -101,6 +101,47 @@
           "showImage": false,
           "visible": true,
           "popupImage": "images/New Years Eve Dinner.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Festive Celebration",
+      "subtitle": "Celebrate the festive season with unforgettable dining experiences, magical moments, and joyful celebrations in Seminyak.",
+      "carousel": false,
+      "visible": true,
+      "links": [
+        {
+          "title": "Sunset Sparkle Soirée",
+          "action": "link",
+          "description": "",
+          "url": "https://theseminyak.hflip.co/Sunset-Sparkle-Soir%C3%A9e",
+          "image": "images/soiree.jpg",
+          "showImage": true,
+          "visible": true,
+          "popupImage": "",
+          "popupAlt": ""
+        },
+        {
+          "title": "New Years Eve Dinner",
+          "action": "link",
+          "description": "",
+          "url": "https://theseminyak.hflip.co/New-Years-Eve-Dinner",
+          "image": "images/4.jpg",
+          "showImage": true,
+          "visible": true,
+          "popupImage": "",
+          "popupAlt": ""
+        },
+        {
+          "title": "New Year's Eve - The Final Countdown Party",
+          "action": "link",
+          "description": "",
+          "url": "https://theseminyak.hflip.co/NYE-Countdown-Party",
+          "image": "images/festivecountdown.jpg",
+          "showImage": true,
+          "visible": true,
+          "popupImage": "",
+          "popupAlt": ""
         }
       ]
     },
