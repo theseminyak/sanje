@@ -1,0 +1,198 @@
+{
+  "site": {
+    "language": "en",
+    "eyebrow": "The Seminyak Beach Resort & Spa",
+    "name": "Festive Celebration",
+    "description": "Celebrate the festive season with unforgettable moments by the sea",
+    "avatar": "images/e98945f9-5d6e-4651-9211-f8a3d608f30f_Untitled-design.png",
+    "showAvatar": true
+  },
+  "theme": {
+    "background": "#000000",
+    "surface": "#f4f0e7",
+    "card": "#fffdf8",
+    "text": "#20312c",
+    "mutedText": "#64736d",
+    "accent": "#b89962"
+  },
+  "background": {
+    "image": "images/festive 2025 large (6).JPG",
+    "showImage": true,
+    "imageOpacity": 0.42,
+    "overlayOpacity": 0.5,
+    "position": "center center",
+    "blur": 1
+  },
+  "socials": [
+    {
+      "label": "Instagram",
+      "icon": "instagram",
+      "shortLabel": "IG",
+      "url": "https://instagram.com/theseminyakbeachresort",
+      "visible": true
+    },
+    {
+      "label": "Facebook",
+      "icon": "facebook",
+      "shortLabel": "FB",
+      "url": "https://www.facebook.com/theseminyak",
+      "visible": true
+    },
+    {
+      "label": "TikTok",
+      "icon": "tiktok",
+      "shortLabel": "TT",
+      "url": "https://tiktok.com/@theseminyakbeachresort",
+      "visible": true
+    },
+    {
+      "label": "YouTube",
+      "icon": "youtube",
+      "shortLabel": "YT",
+      "url": "https://www.youtube.com/channel/UCFxXWp69VuM74YL4fF298yQ",
+      "visible": true
+    },
+    {
+      "label": "WhatsApp",
+      "icon": "whatsapp",
+      "shortLabel": "WA",
+      "url": "https://api.whatsapp.com/send?phone=6281802027888",
+      "visible": true
+    },
+    {
+      "label": "Email",
+      "icon": "envelope-fill",
+      "shortLabel": "@",
+      "url": "mailto:info@theseminyak.com",
+      "visible": true
+    }
+  ],
+  "sections": [
+    {
+      "title": "Rooms Offer",
+      "subtitle": "Stay, celebrate, and embrace the magic of the festive season in Seminyak",
+      "carousel": true,
+      "visible": true,
+      "links": [
+        {
+          "title": "Coastal Christmas Holiday",
+          "action": "link",
+          "popupImage": "",
+          "popupAlt": "",
+          "description": "Celebrate the magic of Christmas by the sea",
+          "url": "https://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?HotelName=ASIAIDHTLTheSeminyak&arrival=2026-12-22&nbstay=4&adults1=1&children1=0&campaignId=46615&accessCode=CAMP-Christmas",
+          "image": "images/festive 2025 large (6).JPG",
+          "showImage": true,
+          "visible": true
+        },
+        {
+          "title": "A Christmas to Remember",
+          "action": "link",
+          "description": "Celebrate the magic of Christmas by the sea",
+          "url": "https://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?HotelName=ASIAIDHTLTheSeminyak&arrival=2026-12-22&nbstay=4&adults1=1&children1=0&campaignId=46619&accessCode=DEAL-Christmas",
+          "image": "images/festive 2025 large (2).JPG",
+          "showImage": true,
+          "visible": true
+        },
+        {
+          "title": "Sparkling Festive Holiday",
+          "action": "link",
+          "description": "Welcome the New Year with an unforgettable beachfront celebration",
+          "url": "https://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?HotelName=ASIAIDHTLTheSeminyak&arrival=2026-12-29&nbstay=4&adults1=1&children1=0&campaignId=46618&accessCode=CAMP-Sparkling",
+          "image": "images/New Year in Seminyak Bali.png",
+          "showImage": true,
+          "visible": true
+        },
+        {
+          "title": "Seaside Festive Journey",
+          "action": "link",
+          "description": "Celebrate Christmas and the New Year by the sea",
+          "url": "https://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?HotelName=ASIAIDHTLTheSeminyak&arrival=2026-12-22&nbstay=10&adults1=1&children1=0&campaignId=46614&accessCode=CAMP-Journey",
+          "image": "images/Festive 2024.jpg",
+          "showImage": true,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "title": "Christmas Events",
+      "subtitle": "Stay, celebrate, and embrace the magic of the festive season in Seminyak",
+      "carousel": false,
+      "visible": true,
+      "links": [
+        {
+          "title": "Christmas Eve Dinner",
+          "action": "link",
+          "popupImage": "images/Christmas Eve Dinner.jpg",
+          "popupAlt": "",
+          "description": "",
+          "url": "https://theseminyak.hflip.co/christmas-eve",
+          "image": "images/Cover2 - Christmas Eve Dinner.jpg",
+          "showImage": true,
+          "visible": true
+        },
+        {
+          "title": "Christmas Day Brunch",
+          "action": "link",
+          "popupImage": "images/Christmas Day Brunch.jpg",
+          "popupAlt": "",
+          "description": "",
+          "url": "https://theseminyak.hflip.co/christmas-brunch",
+          "image": "images/2.jpg",
+          "showImage": true,
+          "visible": true
+        },
+        {
+          "title": "Sunset Sparkle Soirée",
+          "action": "link",
+          "description": "",
+          "url": "https://theseminyak.hflip.co/Sunset-Sparkle-Soir%C3%A9e",
+          "image": "images/3.jpg",
+          "showImage": true,
+          "visible": true,
+          "popupImage": "images/Sunset Sparkle Soirée.jpg"
+        },
+        {
+          "title": "New Years Eve Dinner",
+          "action": "link",
+          "description": "",
+          "url": "https://theseminyak.hflip.co/New-Years-Eve-Dinner",
+          "image": "images/4.jpg",
+          "showImage": true,
+          "visible": true,
+          "popupImage": "images/New Years Eve Dinner.jpg"
+        },
+        {
+          "title": "New Year's Eve - The Final Countdown Party",
+          "action": "link",
+          "description": "",
+          "url": "https://theseminyak.hflip.co/NYE-Countdown-Party",
+          "image": "images/Cover - Festive Countdown.jpg",
+          "showImage": true,
+          "visible": true,
+          "popupImage": "",
+          "popupAlt": ""
+        }
+      ]
+    },
+    {
+      "title": "For More Information",
+      "subtitle": "",
+      "carousel": false,
+      "visible": true,
+      "links": [
+        {
+          "title": "Reserve Now",
+          "action": "link",
+          "description": "",
+          "url": "https://api.whatsapp.com/send?phone=6281802027888",
+          "image": "",
+          "showImage": true,
+          "visible": true,
+          "popupImage": "",
+          "popupAlt": ""
+        }
+      ]
+    }
+  ]
+}
