@@ -144,14 +144,23 @@
             <!-- SECTION: SECTIONS & LINKS (CARDS) -->
             <section class="bg-white p-6 rounded-lg shadow">
                 <div class="flex justify-between items-center mb-4 border-b pb-2">
-                    <h2 class="text-xl font-bold">5. Sections & Cards (Konten Utama)</h2>
+                    <div>
+                        <h2 class="text-xl font-bold">5. Sections & Cards (Konten Utama)</h2>
+                        <p class="text-xs text-gray-500 mt-1">Seret ikon ☰ pada section untuk mengubah urutan seluruh blok.</p>
+                    </div>
                     <button @click="addSection" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">+ Tambah Section Baru</button>
                 </div>
 
                 <div class="space-y-8">
-                    <div v-for="(sec, secIndex) in content.sections" :key="secIndex" class="border-2 border-gray-200 rounded-lg p-4 bg-gray-50">
+                    <div v-for="(sec, secIndex) in content.sections" :key="secIndex" class="border-2 border-gray-200 rounded-lg p-4 bg-gray-50 transition-opacity"
+                         :class="{ 'opacity-50': draggedSection && draggedSection.section === sec }"
+                         @dragover.prevent="onSectionDragOver($event)" @drop.prevent="dropSection($event, sec)">
                         <div class="flex justify-between items-start mb-4">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full pr-4">
+                            <button type="button" draggable="true" @dragstart="startSectionDrag($event, sec)" @dragend="endSectionDrag"
+                                    class="text-gray-400 hover:text-blue-600 cursor-grab active:cursor-grabbing pt-2" aria-label="Seret untuk mengubah urutan section" title="Seret untuk mengubah urutan section">
+                                <i class="bi bi-grip-vertical text-xl"></i>
+                            </button>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1 min-w-0 px-2">
                                 <div>
                                     <label class="block text-sm font-semibold mb-1">Judul Section</label>
                                     <input v-model="sec.title" type="text" class="w-full border rounded p-2 font-bold">
@@ -256,6 +265,8 @@
         createApp({
             data() {
                 return {
+                    draggedLink: null,
+                    draggedSection: null,
                     content: {
                       "site": {
                         "language": "en",
@@ -444,6 +455,37 @@
                 },
                 removeSection(index) {
                     if(confirm('Hapus keseluruhan section ini beserta isinya?')) this.content.sections.splice(index, 1);
+                },
+                startSectionDrag(event, section) {
+                    this.draggedSection = { section };
+                    if (event.dataTransfer) {
+                        event.dataTransfer.effectAllowed = 'move';
+                        event.dataTransfer.setData('text/plain', section.title || 'section');
+                    }
+                },
+                onSectionDragOver(event) {
+                    if (!this.draggedSection) return;
+                    if (event.dataTransfer) event.dataTransfer.dropEffect = 'move';
+                },
+                dropSection(event, targetSection) {
+                    const dragged = this.draggedSection;
+                    this.draggedSection = null;
+                    if (!dragged || dragged.section === targetSection) return;
+
+                    const sections = this.content.sections;
+                    const fromIndex = sections.indexOf(dragged.section);
+                    const targetIndex = sections.indexOf(targetSection);
+                    if (fromIndex < 0 || targetIndex < 0) return;
+
+                    const rect = event.currentTarget.getBoundingClientRect();
+                    let insertIndex = targetIndex + (event.clientY > rect.top + rect.height / 2 ? 1 : 0);
+                    if (fromIndex < insertIndex) insertIndex--;
+
+                    const [movedSection] = sections.splice(fromIndex, 1);
+                    sections.splice(insertIndex, 0, movedSection);
+                },
+                endSectionDrag() {
+                    this.draggedSection = null;
                 },
                 startLinkDrag(event, section, link) {
                     this.draggedLink = { section, link };
